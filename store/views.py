@@ -62,7 +62,7 @@ def logoutUser(request):
 
 def store(request):
 	context = {}
-	return render(request, 'store/store.html', context)
+	return render(request, 'store/index.html', context)
 
 def cart(request):
 	context = {}
@@ -71,3 +71,8 @@ def cart(request):
 def checkout(request):
 	context = {}
 	return render(request, 'store/checkout.html', context)
+
+def signup(request):
+	context = {}
+	return render(request, 'store/signup.html', context)
+    

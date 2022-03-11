@@ -1,0 +1,30 @@
+
+@import "master";
+
+#signupImg{
+    background-image: url(../img/simg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: 100vh;
+    background-color: aqua;
+    
+    
+}
+
+
+#infoholder{
+    padding-top: 15%;
+    padding-left: 10vw;
+
+    input{
+        width: 80%;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    #signupImg {
+      display: none;
+    }
+  }
