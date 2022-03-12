@@ -19,16 +19,23 @@
         <!--img src="img/close.svg" alt="" style="width: 40px; float: right;"-->
         <ul>
             <li><div class=""><a href="#" id="back"><img src="{% static 'img/back.svg' %}" alt="" style="width: 25px; float: left;" ></a></div></li>
-            <br><br><br><br><br>
+            <br><br><br>
+            {% if user.is_authenticated %}
+            <li><div class=""><a href="{% url 'logout' %}"><h2>Logout</h2></a><img src="{% static 'img/user.svg' %}" alt="" style="width: 25px; float: right;"></div></li>
+            <br><hr>
+            {% else %}
+            <li><div class=""><a href="{% url 'login' %}"><h2>Login</h2></a><img src="{% static 'img/user.svg' %}" alt="" style="width: 25px; float: right;"></div></li>
+            <br><hr>
+            {% endif %}
             <li><div class=""><a href="{% url 'store' %}"><h2>Home</h2></a><img src="{% static 'img/home.svg' %}" alt="" style="width: 25px; float: right;"></div></li>
-            <br><hr><br>
+            <br><hr>
             <li><div class=""><a href="#"><h2>Our Products</h2></a><img src="{% static 'img/op.svg' %}" alt="" style="width: 25px; float: right;"></div></li>
-            <br><hr><br>
-            <li><div class=""><a href="#"><h2>About Us</h2></a><img src="{% static 'img/au.svg' %}" alt="" style="width: 25px; float: right;"></div></li>
-            <br><hr><br>
+            <br><hr>
             <li><div class=""><a href="#"><h2>Cart</h2></a><img src="{% static 'img/cart.svg' %}" alt="" style="width: 25px; float: right;"></div></li>
-            <br><hr><br>
+            <br><hr>
             <li><div class=""><a href="#"><h2>My Account</h2></a><img src="{% static 'img/user.svg' %}" alt="" style="width: 25px; float: right;"></div></li>
+            <br><hr>
+            <li><div class=""><a href="#"><h2>About Us</h2></a><img src="{% static 'img/au.svg' %}" alt="" style="width: 25px; float: right;"></div></li>
             <br><hr>
         </ul>
     </div>

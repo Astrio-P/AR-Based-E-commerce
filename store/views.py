@@ -7,10 +7,8 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 
 
-def registerPage(request):
-    """
-    This method is used to view the registration page.
-    """
+def signup(request):
+    
     if request.user.is_authenticated:
         return redirect ('store')
     
@@ -27,7 +25,8 @@ def registerPage(request):
                 return redirect('login')
                 
         context= {'form': form}
-        return render(request, 'store/register.html', context)
+        return render(request, 'store/signup.html', context)
+    
 
 
 def loginPage(request):
@@ -72,7 +71,3 @@ def checkout(request):
 	context = {}
 	return render(request, 'store/checkout.html', context)
 
-def signup(request):
-	context = {}
-	return render(request, 'store/signup.html', context)
-    
