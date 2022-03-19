@@ -2,6 +2,7 @@
     var sidebar = document.getElementById("sidebar");
     var menu= document.getElementById("menu");
     var back=document.getElementById("back");  
+    var addtocart=document.getElementById("addtocart");
 
 
     menu.addEventListener('click',()=>{
@@ -20,4 +21,9 @@
         }else{
             sidebar.style.visibility='visible';
         }
+    })
+
+
+    addtocart.addEventListener('click',()=>{
+        alert ("Item added to the cart");
     })

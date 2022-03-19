@@ -1,5 +1,4 @@
 {% load static %}
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,7 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <title>UrbanWood</title>
   </head>
-  <body>
+  <body style="background-image: url(../../../static/img/top.jpg); background-repeat: repeat-x;">
     <!--Side menubar-->
     <div class="sidebar" id="sidebar">
         
@@ -50,86 +49,73 @@
             
         </div>
         
-    </div>
+    </div><br><br>
 
     <!--end of topbar-->
-    
 
-    <!--heroarea-->
-    <div class="container-fluid" id="heroarea">
-        <video id="herovideoD" autoplay muted loop src="{% static 'src/herovideodesktop.mp4' %}"></video>
-        <!--div class="bod" id="overlay" style="width: 100%; height: 80%; object-fit: cover; top: 0; left: 0; position: absolute;"></div-->
-            
-        <div id="herocontainer" >
-            <h1 id="herotext">Beautifully Crafted Furniture for You</h1><br><br>
-            <a href="{% url 'ourproducts' %}" class="linkbtn">Browse all furniture</a>
-        </div>
-
-    </div>
-    <!--end of heroarea-->
-   
-   <!--Promo area-->
-   <div class="container-fluid" id="promoarea" style="padding-left: 10%; padding-right: 10%;">
-            <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 con">
-
-                    <div class="rect"  style="background-image: url(static/img/pr1.png); background-size: cover;">
-                        <h2 style="color: black;">New Arrival</h2>
-                    </div>
-
-                </div><br>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 con">
-                    <div class="rect" style="background-image: url(static/img/pr2.png); background-size: cover;">
-                        <h2 style="color: black;">Always Popular</h2>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 con">
-                    <div class="rect"  style="background-image: url(static/img/pr3.png); background-size: cover;">
-                        <h2 style="color: black;">Summer Collection</h2>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 con">
-                    <div class="rect"  style="background-image: url(static/img/pr4.png); background-size: cover;">
-                        <h2 style="color: black;">Stylish & Minimalistic</h2>
-                    </div>
-                </div>
-            </div>
-           
-    
-    
-    </div> <br><br><br><br>
-    <!--end of promoarea-->
-
-    <!--Product shocase-->
+   <!--Search option-->
     <div class="row">
+        <div class="container" style="text-align: center;">
+            <input type="text" class="iField" placeholder="Type here to search"  style="width: 300px;" id="search" > <button class="linkbtn" type="submit" id="searchbtn"><img src="../../../static/img/search.png" alt=""></button> <br><br><br>
+        </div>
+    </div>
 
-        <div class="container-fluid pholder ">
-
-            <h1>Recommended For You</h1><br>
-            <ul class="pgallery " style="overflow-x: scroll;">
-                <li><img src= "{% static 'img/p1.png' %}" alt=""><br><br><h5>Swivel Chair Descent</h5><h3>$100</h3></li>
-                <li><img src="{% static 'img/p2.png' %}" alt=""><br><br><h5>Swivel Chair Proust</h5><h3>$150</h3></li>
-                <li><img src="{% static 'img/p3.png' %}" alt=""><br><br><h5>Center Table Sandpiper</h5><h3>$250</h3></li>
-                <li><img src="{% static 'img/p4.png' %}" alt=""><br><br><h5>Center Table Danube</h5><h3>$270</h3></li>
-                <li><img src="{% static 'img/p5.png' %}" alt=""><br><br><h5>Dressing Table Crush</h5><h3>$350</h3></li>
-                <li><img src="{% static 'img/p6.png' %}" alt=""><br><br><h5>Dressing Table Craze</h5><h3>$400</h3></li>
-            </ul>
+   
 
 
-        </div><br><br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 " style="text-align: center;"> 
+                    <img src="../../../static/img/p2-main.png" alt="" class="pimgmain">
+
+            </div>
+
+            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12" style="padding-left: 30px; padding-right: 30px;"> 
+                    <br><br><h1>Swivel Chair Proust</h1>
+                    <h2 style="font-family: gilroy; color: black;">$100</h2> <br><br>
+                    <h4>Product description</h4> <br>
+                    <p>MATERIAL  FINISH: NYLON <span><br></span>
+                        COLOR: BLACK<span><br></span>
+                        SIZE: L630 X W510 X SH490-610 X BH1320 mm</p><br>
+                        <br>
+
+                    <p style="font-size: 11pt; background-color: #E6E6E6; padding: 20px; border-radius: 20px;">Exemplary Craftsmanship of Material
+                        The durability of the chair has been wielded by Metal Inert Gas (MIG), and it has the latest design by the help of 
+                        Japanese CNC machine providing the chair with 99.99% accuracy. Therefore considering all the incredible features, the price is quite reasonable and cheap! 
+                        The cost of this chair will provide you with double the comfort.
+                        Social Media Caption Fun and function get along hand in hand, this chair is proof: noticeable good looks, innovative features 
+                        and an affordable price, this chair ticks all your boxes!</p><br>
+                    
+                        <h5 style="display: inline;">Quantity:  </h5>
+                        <input type="number" class="iField" style="width: 100px; display: inline;" placeholder="0"><br><br>
 
 
+                        <button class="linkbtn" type="submit" id="realtimebtn">View in Realtime</button>
+                    <button class="linkbtn" type="submit" id="addtocart">Add to cart</button><br><br>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12" style="text-align: center;"> 
 
-    </div><br><br><br>
+                <div style="background-color: #E6E6E6; width: 60%; border-radius: 20px; padding-left: 20px; padding-right: 20px;"  id="qrholder">
+                    <br>
+                    <img src="../../../static/img/qrcode.png" alt="" id="qrcode" style="width: 100%;"><br><br>
+                    <p>Scan this QR code to see the product in your space</p><br>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+    
 
 
-    <!--end of product showcase-->
+    <br><br>
+    
 
     <!--footer-->
 
     <div class="row">
         <div class="container-fluid footer" >
-            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 "><img src="{% static 'img/logo-w.svg' %}" alt="" ></div>
+            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 "><img src="img/logo-w.svg" alt="" ></div>
             <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 ">
                     <h4>The Company</h4><br>
                     <a href="#">About Us</a><br><br>

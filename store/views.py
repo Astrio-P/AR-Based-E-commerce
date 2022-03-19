@@ -36,19 +36,18 @@ def loginPage(request):
     if request.user.is_authenticated:
         return redirect('store')
     else:
-          if request.method == 'POST':
-              username =request.POST.get('username')
-              password =request.POST.get('password')
+            if request.method == 'POST':
+                username =request.POST.get('username')
+                password =request.POST.get('password')
              
-              user= authenticate(request, username=username, password=password)
+                user= authenticate(request, username=username, password=password)
 
-              if user is not None:
-                  login(request, user)
-                  return redirect('store')
-              else:
-                  messages.info(request, 'Username or Password is incorrect')
-            
-
+                if user is not None:
+                    login(request, user)
+                    return redirect('store')
+                else:
+                    messages.success(request, ("Username or password is incorrect!"))
+                    return redirect('login')
     context= {}
     return render(request, 'store/login.html', context)
 
@@ -70,4 +69,13 @@ def cart(request):
 def checkout(request):
 	context = {}
 	return render(request, 'store/checkout.html', context)
+
+
+def ourproducts(request):
+	context = {}
+	return render(request, 'store/ourproducts.html', context)
+
+def productpage(request):
+	context = {}
+	return render(request, 'store/productpage.html', context)
 

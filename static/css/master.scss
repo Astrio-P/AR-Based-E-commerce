@@ -212,6 +212,37 @@ a {
 
 }
 
+.pRow{
+    list-style: none;
+    text-align: center;
+    
+    li{
+        display: inline-block;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+.space{
+    width: 10px;
+}
+
+
+.pimgmain{
+    border: 1px solid #E6E6E6;
+    border-radius: 20px;
+    width: auto;
+    object-fit: contain;
+    max-width: 100%;
+    float: right;
+}
+
+
+.topbarbg{
+    background-image: url(../img/top.jpg);
+    background-repeat: repeat-x;
+  }
 
 
 /* width */
@@ -224,4 +255,35 @@ a {
   ::-webkit-scrollbar-thumb {
     background: $colorPrimary;
     border-radius: 5px;
+  }
+
+ #search{
+    border-radius: 50px 0px 0px 50px ;
+
+ }
+
+ #searchbtn{
+    border-radius: 0px 50px 50px 0px;
+    padding: 13px;
+ }
+
+
+ @media only screen and (min-width: 992px) {
+    #realtimebtn {
+      display: none;
+    }
+
+
+  }
+
+
+  @media only screen and (max-width: 992px) {
+
+    #qrholder{
+        display: none;
+    }
+
+    .pimgmain{
+        float: none;
+    }
   }

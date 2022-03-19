@@ -30,7 +30,7 @@
             {% endif %}
             <li><div class=""><a href="{% url 'store' %}"><h2>Home</h2></a><img src="{% static 'img/home.svg' %}" alt="" style="width: 25px; float: right;"></div></li>
             <br><hr>
-            <li><div class=""><a href="#"><h2>Our Products</h2></a><img src="{% static 'img/op.svg' %}" alt="" style="width: 25px; float: right;"></div></li>
+            <li><div class=""><a href="{% url 'ourproducts' %}"><h2>Our Products</h2></a><img src="{% static 'img/op.svg' %}" alt="" style="width: 25px; float: right;"></div></li>
             <br><hr>
             <li><div class=""><a href="#"><h2>Cart</h2></a><img src="{% static 'img/cart.svg' %}" alt="" style="width: 25px; float: right;"></div></li>
             <br><hr>
@@ -46,7 +46,7 @@
     <div class="container-fluid topbar">
         <div>
             <a href="#" id="menu"><img src="{% static 'img/menu.svg' %}" alt="" style=" float: left; padding-left: 20px; width: 45px" ></a>
-            <img src="{% static 'img/logo.svg' %}" alt="" style="width: 150px;">
+            <a href="{% url 'store' %}"><img src="{% static 'img/logo.svg' %}" alt="" style="width: 150px;"></a> 
             <a href="#"><img src="{% static 'img/cart-b.svg' %}" alt="" style="float: right; padding-right:20px; width: 45px;"></a>
             
         </div>
@@ -70,6 +70,7 @@
                             <input type="text" name="username" placeholder="Username..." class="iField"><br><br>
                             <input type="password" name="password" placeholder="Password..." class="iField"><br><br><br>
                             <input class="linkbtn" type="submit" value="Login">    
+                            
                         </form>
                         
                         <br><br><p>Don't have an account? <a href="{% url 'signup' %}">Signup</a></p><br><br>
